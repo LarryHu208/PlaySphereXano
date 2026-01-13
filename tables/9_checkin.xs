@@ -34,7 +34,7 @@ table checkin {
     }
   
     // Source of checkin
-    enum Source?=web {
+    enum source?=web {
       values = ["web", "qr", "discord", "manual"]
     }
   

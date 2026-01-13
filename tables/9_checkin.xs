@@ -33,13 +33,13 @@ table checkin {
     
     }
   
-    // any additional description
-    text? notes? filters=trim
-  
     // Source of checkin
     enum Source?=web {
       values = ["web", "qr", "discord", "manual"]
     }
+  
+    // any additional description
+    text? notes? filters=trim
   }
 
   index = [

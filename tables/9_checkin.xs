@@ -15,7 +15,6 @@ table checkin {
     date date?
     text start_time?
     text end_time?
-    text level_tag?
   }
 
   index = [

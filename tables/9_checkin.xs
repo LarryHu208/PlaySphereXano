@@ -32,6 +32,11 @@ table checkin {
       ]
     
     }
+  
+    // source of checkin
+    enum[] source? {
+      values = ["web", "qr", "discord", "manual"]
+    }
   }
 
   index = [

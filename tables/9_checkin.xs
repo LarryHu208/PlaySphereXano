@@ -21,6 +21,19 @@ table checkin {
   
     // Rating of player
     int rating?
+  
+    // level tag of player
+    enum? level_tag? {
+      values = [
+        "Beginner"
+        "Beg-Int"
+        "Intermediate"
+        "Int-Adv"
+        "Advanced"
+        "Pro"
+      ]
+    
+    }
   }
 
   index = [

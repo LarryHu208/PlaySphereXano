@@ -15,7 +15,7 @@ table checkin {
       table = "club"
     }
   
-    text end_time?
+    timestamp expires_at?
   
     // Rating of player
     int rating?

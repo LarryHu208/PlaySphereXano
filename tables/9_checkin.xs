@@ -8,6 +8,9 @@ table checkin {
       table = "user"
     }
   
+    // name of checkin player
+    text display_name? filters=trim
+  
     int club_id? {
       table = "club"
     }

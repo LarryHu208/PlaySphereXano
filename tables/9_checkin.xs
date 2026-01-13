@@ -15,9 +15,6 @@ table checkin {
     date date?
     text start_time?
     text end_time?
-    text status?
-    text note?
-    int rating?
     text level_tag?
   }
 

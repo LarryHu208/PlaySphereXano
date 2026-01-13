@@ -39,7 +39,7 @@ table checkin {
     }
   
     // any additional description
-    text notes? filters=trim
+    text? notes? filters=trim
   }
 
   index = [

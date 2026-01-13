@@ -18,6 +18,9 @@ table checkin {
     date date?
     text start_time?
     text end_time?
+  
+    // Rating of player
+    int rating?
   }
 
   index = [

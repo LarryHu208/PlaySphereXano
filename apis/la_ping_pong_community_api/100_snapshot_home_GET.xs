@@ -31,10 +31,15 @@ query "snapshot/home" verb=GET {
       return = {type: "list"}
     } as $entries
   
-    // 3.4) Get all schedule entries (full rows; Xano does not support select)
+    // 3.4) Get all checkin and checkin count (full rows; Xano does not support select)
     db.query checkin {
       return = {type: "count"}
     } as $checkin_count
+  
+    // 3.4) Get all checkins (list)
+    db.query checkin {
+      return = {type: "list"}
+    } as $checkins
   
     // 4) Compute total sessions via bitcount(days_mask)
     api.lambda {
@@ -58,6 +63,7 @@ query "snapshot/home" verb=GET {
     generated_at: now
     clubs       : $clubs
     events      : $events
+    checkins    : $checkins
     stats       : ```
       {
         total_clubs: $club_count
